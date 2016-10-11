@@ -1,0 +1,84 @@
+.btn {
+  @include inline-flex();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(center);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 56px;
+  border-radius: 2px;
+  padding: 0 10px;
+  color: $btn-color;
+  font-size: 14px;
+  line-height: 14px;
+  background: $btn-back;
+  @include main-font3();
+  letter-spacing: 10px;
+  -webkit-transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &:before {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxNDM0LjM3NXB4IiBoZWlnaHQ9IjExMDYuMjVweCIgdmlld0JveD0iMCAwIDE0MzQuMzc1IDExMDYuMjUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE0MzQuMzc1IDExMDYuMjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik04ODMuMTI1LDBsLTg2LjI1LDg2LjI1bDQwNi44NzUsNDA2Ljg3NUgwdjEyMGgxMjAzLjc1TDc5Ni44NzUsMTAyMGw4Ni4yNSw4Ni4yNWw1MTAtNTEwbDQxLjI1LTQzLjEyNUwxMzkzLjEyNSw1MTBMODgzLjEyNSwweiIvPjwvc3ZnPg==);
+    -webkit-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+    content: '';
+  }
+
+  &:hover {
+
+    &:before {
+      left: 0;
+    }
+
+    span {
+      -webkit-transform: translateX(200%);
+      -moz-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+      transform: translateX(200%);
+    }
+
+  }
+  &:active {
+    color: $btn-color-active;
+    background: $btn-back-active;
+  }
+
+
+
+}
+button.btn {
+
+  >span {
+    width: 100%;
+    text-align: center;
+    -webkit-transition: -webkit-transform 0.3s;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.3s;
+    backface-visibility: hidden;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .btn {
+    height: 71px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+}

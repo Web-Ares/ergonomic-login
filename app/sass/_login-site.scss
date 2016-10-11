@@ -1,0 +1,70 @@
+.login-site {
+  position: relative;
+  background: $login-site-back;
+  box-shadow: 0 0 40px 0 $login-site-shadow;
+  padding: 40px 0 0;
+  margin: 0 0 25px;
+  border-radius: 2px;
+}
+.login-site__logo {
+  width: 80px;
+  margin: 0 auto 36px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+}
+.login-site__enter {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 15px;
+  margin: 0 auto 25px;
+}
+.login-site__lost {
+  padding: 27px 20px;
+  border-top: 2px solid $login-site-lost-pass-border;
+  font-size: 18px;
+  line-height: 20px;
+  @include main-font2();
+  text-align: center;
+
+  a {
+    color: $login-site-lost-pass-color;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease;
+
+    &:hover {
+      border-bottom-color: $login-site-lost-pass-color-hov;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .login-site {
+    padding: 60px 0 0;
+  }
+  .login-site__logo {
+    width: 104px;
+    margin: 0 auto 58px;
+  }
+  .login-site__enter {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 15px;
+    margin: 0 auto 59px;
+  }
+  .login-site__lost {
+    padding: 35px 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+}
+

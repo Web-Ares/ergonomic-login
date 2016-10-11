@@ -1,0 +1,103 @@
+.site {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(center);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  min-width: 320px;
+  min-height: 100%;
+  padding: 0 30px;
+  background: $site-back;
+  @include main-font1();
+  color: $site-color;
+}
+.site__content {
+  position: relative;
+  max-width: 570px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.site__label {
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  color: $site-label-color;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+input[type="text"].site__input,
+input[type="password"].site__input,
+textarea.site__input,
+input[type="email"].site__input,
+input[type="tel"].site__input,
+input[type="phone"].site__input,
+input[type="number"].site__input {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 0;
+  width: 100%;
+  height: 46px;
+  margin: 0 0 28px;
+  border: none;
+  border-bottom: 2px solid $site-input-border-color;
+  color: $site-input-color;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "proximanova-regular", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-transition: border 0.3s ease, color 0.3s ease;
+  transition: border 0.3s ease, color 0.3s ease;
+
+  &:focus {
+    border-bottom-color: $site-input-focus-border-color;
+    color: #444444;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    box-shadow: 0 0 0 46px $site-input-autofill-shadow inset;
+  }
+
+
+}
+.site__powered {
+  font-size: 16px;
+  line-height: 20px;
+  @include main-font2();
+
+  a {
+    color: $site-powered-color;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease;
+
+    &:hover {
+      border-bottom-color: $site-powered-color;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  input[type="text"].site__input,
+  input[type="password"].site__input,
+  textarea.site__input,
+  input[type="email"].site__input,
+  input[type="tel"].site__input,
+  input[type="phone"].site__input,
+  input[type="number"].site__input {
+    height: 53px;
+    margin: 0 0 28px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+}
+
