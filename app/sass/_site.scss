@@ -1,4 +1,6 @@
 .site {
+  opacity: 0;
+  visibility: hidden;
   @include flexbox();
   @include flex-direction(row);
   @include align-items(center);
@@ -12,6 +14,14 @@
   background: $site-back;
   @include main-font1();
   color: $site-color;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  &.site_loaded {
+    opacity: 1;
+    visibility: visible;
+  }
+
 }
 .site__content {
   position: relative;
