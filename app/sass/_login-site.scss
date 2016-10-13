@@ -1,32 +1,33 @@
 .login-site {
+  opacity: 0;
+  visibility: hidden;
   position: relative;
   background: $login-site-back;
   box-shadow: 0 0 40px 0 $login-site-shadow;
   padding: 40px 0 0;
   margin: 0 0 25px;
   border-radius: 2px;
-
-  >div {
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
-    -webkit-transition: filter 0.3s 0.1s;
-    transition: filter 0.3s 0.1s;
-  }
-
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  -webkit-transition: filter 0.3s linear 0.3s, opacity 0.3s linear 0.3s, visibility 0.3s linear 0.3s;
+  transition: filter 0.3s linear 0.3s, opacity 0.3s linear 0.3s, visibility 0.3s linear 0.3s;
 }
 .site_loaded {
 
   .login-site {
+    opacity: 1;
+    visibility: visible;
+    -webkit-filter: blur(0);
+    -moz-filter: blur(0);
+    -o-filter: blur(0);
+    -ms-filter: blur(0);
+    filter: blur(0);
 
     >div {
-      -webkit-filter: blur(0);
-      -moz-filter: blur(0);
-      -o-filter: blur(0);
-      -ms-filter: blur(0);
-      filter: blur(0);
+
     }
 
   }

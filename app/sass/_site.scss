@@ -20,6 +20,12 @@
   &.site_loaded {
     opacity: 1;
     visibility: visible;
+
+    .site__powered {
+      opacity: 1;
+      visibility: visible;
+    }
+
   }
 
 }
@@ -76,9 +82,13 @@ input[type="number"].site__input {
 
 }
 .site__powered {
+  opacity: 0;
+  visibility: hidden;
   font-size: 16px;
   line-height: 20px;
   @include main-font2();
+  -webkit-transition: opacity 0.3s linear 0.3s, visibility 0.3s linear 0.3s;
+  transition: opacity 0.3s linear 0.3s, visibility 0.3s linear 0.3s;
 
   a {
     color: $site-powered-color;
